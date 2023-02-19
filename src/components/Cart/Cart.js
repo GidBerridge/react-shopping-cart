@@ -30,6 +30,12 @@ const Cart = (props) => {
       ))}
     </ul>
   )
+
+  const order = () => {
+    props.onClose()
+    console.log("ordered")
+  }
+  
   return (
     <Modal onClose={props.onClose}>
       {cartItems}
@@ -41,7 +47,7 @@ const Cart = (props) => {
         <button className={classes['button--alt']} onClick={props.onClose}>
           Close
         </button>
-        {hasItems && <button className={classes.button}>order</button>}
+        {hasItems && <button className={classes.button} onClick={order}>order</button>}
       </div>
     </Modal>
   )
