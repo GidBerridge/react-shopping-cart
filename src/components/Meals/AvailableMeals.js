@@ -5,27 +5,27 @@ import MealItem from './MealItem/MealIteam'
 const DUMMY_MEALS = [
   {
     id: 'm1',
-    name: 'Sushi',
-    description: 'Finest fish and veggies',
-    price: 22.99,
+    name: 'Gibson Les Paul Standard 2019',
+    description: 'Sunburst',
+    price: 2199.00,
   },
   {
     id: 'm2',
-    name: 'Schnitzel',
-    description: 'A german specialty!',
-    price: 16.5,
+    name: 'Fender Stratocastor US 2022',
+    description: 'Black',
+    price: 1799.00,
   },
   {
     id: 'm3',
-    name: 'Barbecue Burger',
-    description: 'American, raw, meaty',
-    price: 12.99,
+    name: 'Musicman Stingray Bass 5 String',
+    description: 'Metallic blue',
+    price: 1899.00,
   },
   {
     id: 'm4',
-    name: 'Green Bowl',
-    description: 'Healthy...and green...',
-    price: 18.99,
+    name: 'Rickenbacker 360',
+    description: 'Green',
+    price: 3400.00,
   },
 ]
 

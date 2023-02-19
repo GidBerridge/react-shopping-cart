@@ -13,7 +13,7 @@ const Header = (props) => {
         <div>
           <img src={icon} alt="wave icon" className={classes.headerIcon} />
         </div> 
-        <h1 className="title"> Kahuna Guitars </h1> 
+        <h1 className={classes.headerTitle}> Kahuna Guitars </h1> 
         <HeaderCartButton onClick={props.onShowCart}/> 
       </header> 
         <div className={classes['main-image']} >

@@ -3,14 +3,12 @@ import classes from './MealsSummary.module.css'
 const MealsSummary = () => {
   return (
     <section className={classes.summary}>
-      <h2>Delicious Food, Delivered To You</h2>
+      <h2>Kahuna Guitars - New, secondhand and vintage guitars at great prices! </h2>
       <p>
-        Choose your favorite meal from our broad selection of available meals
-        and enjoy a delicious lunch or dinner at home.
+        At Kahuna we live, breathe and eat guitars!.
       </p>
       <p>
-        All our meals are cooked with high-quality ingredients, just-in-time and
-        of course by experienced chefs!
+        Whether you're a Fender bender, a Gibson grappler or anything else, treat yourself to a guitar or two. Or ten...
       </p>
     </section>
   )
