@@ -3,8 +3,11 @@ import Modal from '../UI/Modal'
 import { useContext } from 'react'
 import CartContext from '../../store/cart-context'
 import CartItem from './CartItem'
+import { useState } from 'react'
+
 
 const Cart = (props) => {
+  const [isOrdered, setIsOrdered] = useState(false)
   const cartCtx = useContext(CartContext)
   const totalAmount = `$${cartCtx.totalAmount.toFixed(2)}`
   const hasItems = cartCtx.items.length > 0
@@ -30,21 +33,51 @@ const Cart = (props) => {
       ))}
     </ul>
   )
-  return (
-    <Modal onClose={props.onClose}>
-      {cartItems}
-      <div className={classes.total}>
-        <span>Total Amount</span>
-        <span>{totalAmount}</span>
-      </div>
-      <div className={classes.actions}>
-        <button className={classes['button--alt']} onClick={props.onClose}>
-          Close
-        </button>
-        {hasItems && <button className={classes.button}>order</button>}
-      </div>
-    </Modal>
-  )
+
+  const order = () => {
+    setIsOrdered(true)
+    console.log("ordered")
+  }
+
+  if (isOrdered === false) {
+    return (
+      <Modal onClose={props.onClose}>
+        {cartItems}
+        
+              
+        <div className={classes.total}>
+          <span>Total Amount</span>
+          <span>{totalAmount}</span>
+        </div>
+        <div className={classes.actions}>
+          <button className={classes['button--alt']} onClick={props.onClose}>
+            Close
+          </button>
+          {hasItems && <button className={classes.button} onClick={order}>order</button>}
+        </div>
+
+      </Modal>
+    )
+  } else {
+    return (
+      <Modal onClose={props.onClose}>
+
+        <div className={classes.total}>
+        Thank you
+        <br></br>
+        Your order is being processed
+          <span></span>
+        </div>
+
+        <div className={classes.actions}>
+          <button className={classes['button--alt']} onClick={props.onClose}>
+            Close
+            </button>
+        </div>
+
+      </Modal>
+    )
+  }
 }
 
 export default Cart
