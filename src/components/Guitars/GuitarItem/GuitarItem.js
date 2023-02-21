@@ -1,5 +1,4 @@
 import { useContext } from 'react'
-
 import classes from './GuitarItem.module.css'
 import GuitarItemForm from './GuitarItemForm'
 import CartContext from '../../../store/cart-context'
@@ -18,21 +17,17 @@ const GuitarItem = (props) => {
         })
     }
 
-    return ( <
-        li className = { classes.Guitar } >
-        <
-        div >
-        <
-        h3 > { props.name } < /h3> <
-        div className = { classes.description } > { props.description } < /div> <
-        div className = { classes.price } > { price } < /div> <
-        /div> <
-        div >
-        <
-        GuitarItemForm onAddToCart = { addToCartHandler }
-        /> <
-        /div> <
-        /li>
+    return ( 
+        <li className = { classes.guitar } >
+            <div style= {{width: "360px"}}>
+                <h3 > { props.name } </h3> 
+                <div className = { classes.description } > { props.description } </div> 
+                <div className = { classes.price } > { price } </div> 
+            </div> 
+            <div>
+                <GuitarItemForm onAddToCart = { addToCartHandler }/> 
+            </div>
+        </li>
     )
 }
 
