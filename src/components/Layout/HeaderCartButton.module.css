@@ -5,13 +5,16 @@
     background-color: var(--secondary-green);
     color: white;
     padding: 0.75rem 3rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-radius: 25px;
-    font-weight: bold;
-    margin-left: auto;
+    font-weight: bold;   
 }
+
+        
 
 .button:hover,
 .button:active {
@@ -56,5 +59,12 @@
     }
     100% {
         transform: scale(1);
+    }
+}
+
+@media only screen and (min-width: 702px) {
+    .button {
+        margin-left: auto;
+        margin-bottom: 0;
     }
 }
