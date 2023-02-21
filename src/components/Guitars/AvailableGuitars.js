@@ -4,32 +4,33 @@ import GuitarItem from './GuitarItem/GuitarItem'
 
 const DUMMY_GUITARS = [{
         id: 'm1',
-        name: 'Gibson Les Paul Standard 2019',
-        description: 'Sunburst',
-        price: 2199.00,
+        name: 'Gibson Les Paul',
+    description: 'Delux 2019, Sunburst',
+        price: 2299.00,
     },
     {
         id: 'm2',
-        name: 'Fender Stratocastor US 2022',
-        description: 'Black',
+        name: 'Fender Stratocastor US',
+        description: 'Standard 2022, Cream',
         price: 1799.00,
     },
     {
         id: 'm3',
-        name: 'Musicman Stingray Bass 5 String',
-        description: 'Metallic blue',
+        name: 'Fender Jazz Bass',
+        description: 'Fretless, Black',
         price: 1899.00,
     },
     {
         id: 'm4',
         name: 'Rickenbacker 360',
-        description: 'Green',
+        description: 'Semi-Acoustic, Green',
         price: 3400.00,
     },
 ]
 
 const AvailableGuitars = () => {
-    const guitarsList = DUMMY_GUITARS.map((guitar) => ( <
+    const guitarsList = DUMMY_GUITARS.map((guitar) => ( 
+        <
         GuitarItem id = { guitar.id }
         key = { guitar.id }
         name = { guitar.name }
