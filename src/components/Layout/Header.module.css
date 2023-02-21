@@ -3,13 +3,14 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 5rem;
     background-color: var(--primary-dark);
     display: flex;
     align-items: center;
     padding: 0 10%;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     z-index: 10;
+    flex-wrap: wrap;
+    justify-content: center
 }
 
 .header h1 {
@@ -22,7 +23,12 @@
 
 .headerTitle {
     font-family: 'Lakki Reddy', cursive;
-    padding: 1rem 0 0 1rem;
+    padding: 2rem 0 0 1rem;
+}
+
+.headerKahuna {
+    display: flex;
+    align-items: center;
 }
 
 .main-image {
